@@ -16,24 +16,18 @@ if answer == "left":
         print("you swim across and was eaten by an a crocodile")
     elif answer == "walk":
 
-        print(
-            "you walked for many miles, and ran out of water. You lost the game."
-        )
+        print("you walked for many miles, and ran out of water. You lost the game.")
     else:
         print("not a valid option. You lose")
 
 elif answer == "right":
-    answer = input(
-        "You come to a bridge, it looks wobbbly do you want to cross it or head back (cross/back)? "
-    )
+    answer = input("You come to a bridge, it looks wobbbly do you want to cross it or head back (cross/back)? ")
 
     if answer == "back":
         print("you go back and loose!")
 
     elif answer == "cross":
-        print(
-            "You cross the bridge and meet a stranger. Do you talk to them ? (yes/no) "
-        )
+        print("You cross the bridge and meet a stranger. Do you talk to them ? (yes/no) ")
 
         if answer == "yes":
             print("You talk to the stanger and they give you gold. you win!")
