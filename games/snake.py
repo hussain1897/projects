@@ -5,6 +5,7 @@ import pygame
 import tkinter as tk
 from tkinter import messagebox
 import sys
+pygame.init
 
 class cube(object):
     row = 20
