@@ -53,7 +53,7 @@ def message_box(subject, content):
 
 def main():
     global width, rows , s
-    width = 500 #width of the screen 
+    width = 500 #width of the screen
     height = 500
     rows = 20 #amount of rows
     win = pygame.display.set_mode((width, height))
