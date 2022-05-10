@@ -1,7 +1,8 @@
 import sys
-from click import command
+
 import clipboard
 import json
+
 
 SAVED_DATA = "clipboard.json"
 
@@ -12,7 +13,7 @@ def save_data(filepath, data):
 def load_data(filepath):
     try:
         with open(filepath, "r") as f:
-            data = json.load
+            data = json.load(f)
             return data
     except:
         return {}
@@ -28,9 +29,15 @@ if len(sys.argv) == 2:
         print("data saved")
 
     elif command == "load":
-        print("load")
+        key = input("Enter a key: ")
+        if key in data:
+            clipboard.copy(data[key])
+            print("Data copied to clipboard.")
+        else:
+            print("key does not exist.")
+        
     elif command == "list":
-        print("list")
+        print(data)
     else:
         print("unknown command")
 else:
